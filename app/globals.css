@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+.dark { color-scheme: dark; }
+html,body{scroll-behavior:smooth}
+body{@apply bg-slate-50 text-slate-900 dark:bg-[#030712] dark:text-slate-100 antialiased;}
+
+.glass{@apply bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10}
+.section{@apply max-w-7xl mx-auto px-4 md:px-6 lg:px-8}
+.gradient-text{
+  background: linear-gradient(90deg,#0A66C2,#67e8f9,#0A66C2);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
