@@ -4,12 +4,67 @@
 
 :root { color-scheme: light; }
 .dark { color-scheme: dark; }
-html,body{scroll-behavior:smooth}
-body{@apply bg-slate-50 text-slate-900 dark:bg-[#030712] dark:text-slate-100 antialiased;}
 
-.glass{@apply bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10}
-.section{@apply max-w-7xl mx-auto px-4 md:px-6 lg:px-8}
-.gradient-text{
-  background: linear-gradient(90deg,#0A66C2,#67e8f9,#0A66C2);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
+html, body { scroll-behavior: smooth; }
+
+body {
+  @apply antialiased bg-slate-50 text-slate-900 dark:bg-[#040814] dark:text-slate-100;
+}
+
+::selection {
+  background: rgba(10,102,194,.25);
+}
+
+.section {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section-pad {
+  @apply py-20 md:py-28;
+}
+
+.glass {
+  @apply bg-white/70 dark:bg-white/[0.04] backdrop-blur-xl border border-white/40 dark:border-white/10;
+}
+
+.glow-ring {
+  box-shadow: 0 0 0 1px rgba(103,232,249,.2), 0 10px 40px rgba(10,102,194,.25);
+}
+
+.gradient-text {
+  background: linear-gradient(
+    92deg,
+    #8cc8ff 0%,
+    #0A66C2 35%,
+    #67e8f9 68%,
+    #a5f3fc 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-bg {
+  background:
+    radial-gradient(circle at 12% 20%, rgba(10,102,194,.26), transparent 34%),
+    radial-gradient(circle at 85% 18%, rgba(103,232,249,.22), transparent 32%),
+    radial-gradient(circle at 50% 70%, rgba(13,24,63,.66), transparent 58%);
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(to right, rgba(148,163,184,.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148,163,184,.15) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(10,102,194,.45),
+    rgba(103,232,249,.45),
+    transparent
+  );
 }
