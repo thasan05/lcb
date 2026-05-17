@@ -14,7 +14,7 @@ export function SiteChrome() {
       <button
         aria-label="Toggle theme"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        className="fixed right-4 top-4 z-50 rounded-full border border-white/20 bg-white/70 p-2 backdrop-blur-xl dark:border-white/10 dark:bg-white/10"
+        className="fixed right-4 top-4 z-50 glass rounded-full p-2"
       >
         {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
       </button>
